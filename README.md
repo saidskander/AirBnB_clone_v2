@@ -29,7 +29,7 @@ This repository contains the initial stage of student project to build a clone o
 ```
 /AirBnB_clone$ ./console.py
 ```
-4. When this command is run the following prompt should appear:
+4. When this command is to run the following prompt should appear:
 ```
 (hbnb)
 ```
