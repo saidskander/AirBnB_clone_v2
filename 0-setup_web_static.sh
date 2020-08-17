@@ -1,17 +1,13 @@
 #!/usr/bin/env bash
-# sets up your web servers for the deployment of web_static.
-
-apt-get update
+# sets up web servers for the deployment of web_static
+apt-get update -y
 apt-get install -y nginx
-
+mkdir /data/web_static/shared/
 mkdir -p /data/web_static/releases/test/
-mkdir -p /data/web_static/shared/
 echo "Holberton School" > /data/web_static/releases/test/index.html
-ln -sf /data/web_static/releases/test/ /data/web_static/current
-
+ln -nsf /data/web_static/releases/test/ /data/web_static/current
 chown -R ubuntu /data/
 chgrp -R ubuntu /data/
-
 printf %s "server {
     listen 80 default_server;
     listen [::]:80 default_server;
@@ -23,7 +19,7 @@ printf %s "server {
         index index.html index.htm;
     }
     location /redirect_me {
-        return 301 http://cuberule.com/;
+        return 301 https://github.com/saidskander;
     }
     error_page 404 /404.html;
     location /404 {
@@ -31,5 +27,4 @@ printf %s "server {
       internal;
     }
 }" > /etc/nginx/sites-available/default
-
 service nginx restart
