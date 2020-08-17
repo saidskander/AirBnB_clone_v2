@@ -11,7 +11,7 @@ def do_pack():
     try:
         local("mkdir -p ./versions")
         local("tar --create --verbose --file={} -z ./web_static"
-              .format(file_name))
-        return file_name
+              .format(file))
+        return file
     except:
         return None
