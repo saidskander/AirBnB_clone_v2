@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-# Fabric script that generates a .tgz archive from the contents of the web_static
+# Fabric script that generates a
+# .tgz archive from the contents of the web_static
 import os.path
 from datetime import datetime
 from fabric.api import local
+""" def do_pack """
+
 
 def do_pack():
     """create a tar.gz tar gzipped archivz for directory web_static"""
