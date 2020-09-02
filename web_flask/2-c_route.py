@@ -15,5 +15,12 @@ def hbnb():
     """ funtion displays HBNB """
     return "HBNB"
 
+
+@app.route("/c/<text>", strict_slashes=False)
+def c_text():
+    """ funtion displays HBNB """
+    return "/c/<text>"
+
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
