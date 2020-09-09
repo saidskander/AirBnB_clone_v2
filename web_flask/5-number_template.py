@@ -24,17 +24,24 @@ def c_text(text):
 
 @app.route("/python", strict_slashes=False)
 @app.route("/python/<text>", strict_slashes=False)
-def python(text="is cool"):
+def python_is_cool(text="is cool"):
     """ funtion displays Python is cool """
     text = text.replace("_", " ")
     return "Python {}".format(text)
 
 
 @app.route("/number/<int:n>", strict_slashes=False)
-def number(n):
+def number_n(n):
     """display “n is a number” only if n is an integer
        and / The default value of text is “is cool”"""
     return "{} is a number".format(n)
+
+
+@app.route("/number_template/<int:n>", strict_slashes=False)
+def number_templates_n(n):
+    """display “n is a number” only if n is an integer
+       / display a HTML page only if n is an integer"""
+    return template_n("5-number.html", n=n)
 
 
 if __name__ == "__main__":
