@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ Flask web application """
+from flask import render_template
 from flask import Flask
 app = Flask(__name__)
 
@@ -41,7 +42,7 @@ def number_n(n):
 def number_templates_n(n):
     """display “n is a number” only if n is an integer
        / display a HTML page only if n is an integer"""
-    return template_n("5-number.html", n=n)
+    return render_template("5-number.html", n=n)
 
 
 if __name__ == "__main__":
