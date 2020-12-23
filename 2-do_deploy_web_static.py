@@ -10,7 +10,7 @@ from fabric.operations import run
 from fabric.operations import put
 """ def do_pack """
 
-env.hosts = ['35.196.178.240', '34.74.85.130']
+env.hosts = ['35.237.87.143', '34.75.67.199']
 
 
 def do_deploy(archive_path):
