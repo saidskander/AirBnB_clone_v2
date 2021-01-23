@@ -11,9 +11,9 @@ def hello_hbnb():
 
 
 @app.route("/hbnb", strict_slashes=False)
-def hello_hbnb():
-    """ello HBNB!"""
-    return "Hello HBNB!"
+def hbnb():
+    """ funtion displays HBNB """
+    return "HBNB"
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
